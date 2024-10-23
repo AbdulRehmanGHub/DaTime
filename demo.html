@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <style>
+        .resultTable {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .row {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="leftpart">
+        <input type="text" placeholder="Enter seconds, ms, or ns">
+        <button onclick="convertBtn()">Convert</button>
+    </div>
+
+    <div class="resultTable"></div>
+
+    <script>
+        const resultTable = document.querySelector(".resultTable");
+        const input = document.querySelector(".leftpart input");
+
+        setInterval(() => {
+            document.querySelector("#timeInSeconds").textContent = Math.floor(Date.now() / 1000);
+            document.querySelector("#currentTime").textContent = new Date().toLocaleTimeString();
+        }, 1000);
+
+        function convertBtn() {
+            const inputVal = Number(input.value.trim());
+            if (isNaN(inputVal)) {
+                alert("Please enter a valid number!");
+                return;
+            }
+
+            const timestamp = inputVal > 1e12 ? inputVal / 1e6  // nanoseconds to ms
+                : inputVal > 1e10 ? inputVal        // milliseconds
+                    : inputVal * 1000;                  // seconds to ms
+
+            const date = new Date(timestamp);
+            const now = Date.now();
+            const relativeTime = Math.floor((now - timestamp) / (1000 * 60 * 60 * 24 * 365));
+
+            resultTable.style.display = "block";
+            resultTable.innerHTML = `
+                <div class="row"><strong>Format:</strong> ${inputVal}</div>
+                <div class="row"><strong>GMT:</strong> ${date.toUTCString()}</div>
+                <div class="row"><strong>Your Time Zone:</strong> ${date}</div>
+                <div class="row"><strong>Relative:</strong> ${relativeTime} Years Ago</div>
+            `;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaTime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>DaTime</h2>
+    </header>
+
+    <main>
+        <div class="leftpart">
+            <h2>The Current Epoch Unix Timestamp</h2>
+            <h3>Enter a Timestamp</h3>
+            <input id="inputField" type="number" placeholder="170383999">
+            <p>Supports Unix timestamps in seconds, milliseconds, microseconds, and nanoseconds.</p>
+            <button onclick="convertBtn()">Convert &RightArrow; </button>
+        </div>
+
+        <div class="rightpart">
+            <h2 id="timeInSeconds"></h2>
+            <p>Seconds Since Jan 01 1970. (UTC)</p>
+            <p id="currentTime">10:50:30 PM</p>
+            <div class="rightbtn">
+                <button>Copy</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="resultTable">
+        <!-- <div class="row1">
+            <h2>Format</h2>
+            <p>Seconds</p>
+        </div>
+        <div class="row2">
+            <h2>GMT</h2>
+            <p>Thu Jan, 01, 1970 00:09:53 GMT+0000</p>
+        </div>
+        <div class="row3">
+            <h2>Your Time Zone</h2>
+            <p>Thu Jan, 01, 1970 00:09:53 GMT+0000(Pakistan Standard Time)</p>
+        </div>
+        <div class="row4">
+            <h2>Relative</h2>
+            <p>54 Years Ago</p>
+        </div> -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

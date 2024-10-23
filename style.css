@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    cursor: default;
+    background-color: #000000;
+    color: #fff !important;
+}
+
+header {
+    box-shadow: 2px 2px 10px grey;
+    padding: .2rem 1.2rem;
+}
+
+header h2 {
+    font-size: 2rem;
+}
+
+main {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.leftpart {
+    width: 30rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.leftpart h2 {
+    font-size: 1.2rem;
+}
+
+.leftpart h3 {
+    font-size: .9rem;
+}
+
+.leftpart p {
+    padding: 0 2rem 0 0;
+    width: 92%;
+    font-size: 1rem;
+    color: #666666;
+}
+
+.leftpart input {
+    width: 90%;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: .4rem .6rem;
+    outline: none;
+    color: #fff;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #adadad;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.leftpart button {
+    font-size: 1rem;
+    padding: .6rem .8rem;
+    background-color: rgb(28, 153, 255);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+
+.leftpart button:hover {
+    background-color: rgb(0, 140, 255);
+}
+
+
+
+
+
+.rightpart {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.rightpart h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.rightpart p {
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.rightbtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rightpart button {
+    font-size: 1rem;
+    padding: .4rem .6rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.resultTable {
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    border: 1px solid black;
+    width: 74%;
+    margin: 0 auto;
+}
+
+.row1,
+.row2,
+.row3,
+.row4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.resultTable h2 {
+    text-align: start;
+    width: 30%;
+    font-size: 1rem;
+}
+
+.resultTable p {
+    text-align: start;
+    flex: 1;
+    font-size: .8rem;
+}
