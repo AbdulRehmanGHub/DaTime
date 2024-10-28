@@ -8,8 +8,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%;
     cursor: default;
-    background-color: #000000;
-    color: #fff !important;
 }
 
 header {
@@ -39,7 +37,8 @@ main {
     gap: .6rem;
 }
 
-.leftpart h2 {
+.timeHeading {
+    margin: 2rem 0 0 1.4rem;
     font-size: 1.2rem;
 }
 
@@ -60,7 +59,6 @@ main {
     font-size: 1.2rem;
     padding: .4rem .6rem;
     outline: none;
-    color: #fff;
     border: 1px solid grey;
     border-radius: 4px;
     background-color: transparent;
@@ -86,10 +84,6 @@ main {
 .leftpart button:hover {
     background-color: rgb(0, 140, 255);
 }
-
-
-
-
 
 .rightpart {
     padding: 1rem;
@@ -161,4 +155,131 @@ main {
     text-align: start;
     flex: 1;
     font-size: .8rem;
+}
+
+@media (min-width: 1800px) {
+    header h2 {
+        font-size: 3.2rem;
+    }
+
+    main {
+        padding: 2.2rem;
+        gap: 3.2rem;
+    }
+
+    .leftpart {
+        width: 46rem;
+        padding: 1.4rem;
+        gap: 1rem;
+    }
+
+    .timeHeading {
+        margin: 2rem 0 0 1.4rem;
+        font-size: 2.4rem;
+    }
+
+    .leftpart h3 {
+        font-size: 1.6rem;
+    }
+
+    .leftpart p {
+        padding: 0;
+        width: 90%;
+        font-size: 1.8rem;
+    }
+
+    .leftpart input {
+        width: 84%;
+        height: 3rem;
+        font-size: 2rem;
+    }
+
+    ::placeholder {
+        font-size: 2.2rem;
+    }
+
+    .leftpart button {
+        font-size: 2rem;
+        padding: .6rem 1.2rem;
+    }
+
+    .rightpart {
+        padding: 1.4rem;
+        gap: 1rem;
+    }
+
+    .rightpart h2 {
+        font-size: 4.4rem;
+        letter-spacing: 3px;
+    }
+
+    .rightpart p {
+        font-size: 1.4rem;
+    }
+
+    .rightpart button {
+        font-size: 1.8rem;
+        padding: .8rem 1rem;
+    }
+
+    .resultTable {
+        width: 68%;
+    }
+
+    .resultTable h2 {
+        width: 24%;
+        font-size: 1.8rem;
+    }
+
+    .resultTable p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: .4rem;
+    }
+
+    .leftpart {
+        width: 100%;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .timeHeading {
+        margin: 1.4rem 0 0 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .leftpart p {
+        width: 94%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .leftpart input {
+        width: 82%;
+    }
+
+    .leftpart button {
+        font-size: 1.2rem;
+        padding: .6rem 2.4rem;
+    }
+
+    .resultTable {
+        width: 88%;
+        margin: 16px auto;
+    }
+
+    .resultTable h2 {
+        font-size: .9rem;
+    }
+
+    .resultTable p {
+        font-size: .8rem;
+    }
 }
